@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -13,14 +13,6 @@
   }
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
 
 .App-link {
   color: rgb(112, 76, 182);
@@ -36,19 +28,70 @@
   100% {
     transform: translateY(0px);
   }
+} */
+
+/* Custom changes below */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgb(204, 187, 187);
+  padding: 30px;
+}
+
+.App-header {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, rgb(135, 166, 180,0.2), rgb(79, 112, 121,0.6)),url(../Media/EifelTower.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 120vh);
+  position: relative;
+  
+}
+
+.logo{
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  margin: 10px;
+  height:130px;
+  width: 140px;
+  z-index: 1;
+  
 }
 
 .tile{
   width: 100%; 
   height: 100%;
-  background-color: #C36A2D;
   padding: 30px 20px;
   margin: 30px 30px;
 }
 .unit-tile {
   width: 400px;
   height: 400px;
-  background-color: #FBFBFB;
   padding: 30px 20px;
   margin: 30px 30px;
+}
+
+.navbar{
+  display: block;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.nav-link{
+  padding: auto;
+  margin: 10px 30px;
+  text-decoration: none;
+  color: rgba(62, 166, 211, 0.8);
+  font-weight: 700;
+  font-size: 32px;
 }

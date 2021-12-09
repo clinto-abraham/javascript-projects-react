@@ -11,14 +11,28 @@ const config = {
         rules: [
             {
                 use: 'babel-loader',
-                test: /\.js$/,
+                test: /\.(jsx|js)$/,
                 exclude: path.resolve(__dirname, 'node_modules'),           
             },
             {
                 use: ["style-loader", "css-loader"],
                 test: /\.css$/,
                 exclude: path.resolve(__dirname, 'node_modules'), 
-            }
+            },
+            {
+              test: /\.(jpg|png|svg|jpeg)$/,
+              loader: 'url-loader',
+              options: {
+                limit: 25000,
+              },
+          },
+          {
+              test: /\.(jpg|png|svg|jpeg)$/,
+              loader: 'file-loader',
+              options: {
+                name: '[path][name].[hash].[ext]',
+              },
+          },
         ]
     },
     plugins: [

@@ -6,7 +6,7 @@ import {
     QueryClientProvider,
   } from 'react-query'
 //   import { getTodos, postTodo } from '../my-api'
-
+import { Outlet } from 'react-router-dom'
 const postTodo =(a)=> console.log(a)
 
 const API = async ()=> {
@@ -54,6 +54,7 @@ const API = async ()=> {
         <p>{status === "error" ? 
         <span>Error loading data. Kindly check the internet connection</span> :
          null}</p>
+         <Outlet />
       </div>
     )
   }
@@ -66,6 +67,7 @@ const API = async ()=> {
       // Provide the client to your App
       <QueryClientProvider client={queryClient}>
         <Photos />
+        
       </QueryClientProvider>
     )
   }
