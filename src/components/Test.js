@@ -2,8 +2,9 @@ import React from 'react';
 
 const Test = () => {
   return <div>We are ammending
-      <H1>We are amending changes into pull request.</H1>
+      <h1>We are amending changes into pull request.</h1>
       <small>rebasing now</small>
+      <h6>stuff will be committed to branch rebase-test</h6>
   </div>;
 };
 
