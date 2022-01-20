@@ -49,7 +49,7 @@ const API = async ()=> {
         //     })
         //   }}
         >
-          Add Todo
+          Add Todos
         </button>
         <p>{status === "error" ? 
         <span>Error loading data. Kindly check the internet connection</span> :
