@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import FloatingActionButtons from './FloatActionButton';
+import TemporaryDrawer from './Drawer';
 const Navbar = () => {
     return (
         <div>
+          <TemporaryDrawer />
+<FloatingActionButtons /> 
         <nav className="navbar">
           <Link to="/" className="nav-link">Home</Link> 
           <Link to="material-ui" className="nav-link">Material Ui</Link>
@@ -22,3 +26,5 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+

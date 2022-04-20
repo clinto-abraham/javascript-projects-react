@@ -1,0 +1,31 @@
+JAVASCRIPT :
+We do not have to manually define the data type of the value stored in a variable. Instead, data types are determined automatically. 
+(Value has type, not variable)
+Anomaly:
+i. JS has a bug on type of null as a object, haven't rectified yet. console.log(typeof null) // return object    // 
+Value has two types: 
+1. object
+a.)
+2. primitive:
+There are 7 primitive data types: 
+a.) number : Floating point numbers - Used for decimals and integers
+b.) string : Sequence of characters - Used for text 
+c.) boolean : Used for taking decisions 
+d.) undefined : Value taken by a variable that is not yet defined. (empty value).
+e.) null : Also means empty value.
+f.) symbol (ES2015) : Value that is unique and cannot be changed. 
+g.) bigInt (ES2020) : Larger integers than the Number type can hold .
+
+
+// Mutate a variable ( let is functional scope)
+=> let age = 30;
+age = 31;
+
+// Cannot mutate (Cannot change the value of const variable. )
+const birthYear = 1992;
+birthYear = 2000 // Uncaught error 
+const job;       // Uncaught error : Missing initializer in const declaration
+
+// Not recommended to use var 
+var checkVar = 'Programmer'
+checkVar = 'software'  // No error. var is global scope

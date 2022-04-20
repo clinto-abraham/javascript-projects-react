@@ -3,6 +3,8 @@ import React from "react";
 import "./styles/App.css";
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import SimpleBackdrop from './components/BackToTop';
+import BottomAppBar from './components/MessageApp'
 // import your route components too
 import MaterialUI from "./components/Material_UI";
 import ReactQueryApp from "./components/reactQuery";
@@ -38,6 +40,8 @@ const App = () => {
           
         </Route>
       </Routes>
+      <SimpleBackdrop />
+      <BottomAppBar />
     </BrowserRouter>
   );
 };

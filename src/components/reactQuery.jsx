@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {
     useQuery,
     useMutation,
@@ -7,6 +8,7 @@ import {
   } from 'react-query'
 //   import { getTodos, postTodo } from '../my-api'
 import { Outlet } from 'react-router-dom'
+import SkeletonBasic from './Skeleton';
 const postTodo =(a)=> console.log(a)
 
 const API = async ()=> {
@@ -33,12 +35,11 @@ const API = async ()=> {
     return (
       <div>
           <h1>{status}</h1>
-
         <ul>
           {status === 'success' ? data.map(todo => (
             <p key={todo.id}>{todo.title}</p>
 
-          )) : status}
+          )) : <SkeletonBasic /> }
         </ul>
   
         <button
@@ -62,7 +63,6 @@ const API = async ()=> {
       // Provide the client to your App
       <QueryClientProvider client={queryClient}>
         <Photos />
-        
       </QueryClientProvider>
     )
   }
